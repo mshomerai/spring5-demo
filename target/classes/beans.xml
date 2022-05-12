@@ -4,16 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <!--scope默认singleton-->
+    <!--autowire.byName根据属性名称自动ref可用bean-->
     <!--prototype对象不会随容器关闭而摧毁，不会执行destroy-method-->
     <!--process(before)->init->process(after)->construct+set->bean use->destroy-->
-    <bean id="user" class="ml.java.spring5.demo1.User" scope="singleton" init-method="init" destroy-method="destroy">
+    <bean id="user" class="ml.java.spring5.demo1.User" scope="singleton" init-method="init" destroy-method="destroy" autowire="byName">
         <property name="name">
             <value><![CDATA[<<超级>>]]></value>
             <!--<null/>-->
         </property>
-        <property name="city">
-            <ref bean="city"/>
-        </property>
+        <!--<property name="city">-->
+            <!--<ref bean="city"/>-->
+        <!--</property>-->
         <!--<property name="city">-->
             <!--<bean id="city" class="ml.java.spring5.demo11.City">-->
                 <!--<property name="region" value="SH"/>-->
