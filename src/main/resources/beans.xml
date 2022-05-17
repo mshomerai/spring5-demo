@@ -9,7 +9,7 @@
     <!--process(before)->init->process(after)->construct+set->bean use->destroy-->
     <bean id="user" class="ml.java.spring5.demo1.User" scope="singleton" init-method="init" destroy-method="destroy" autowire="byName">
         <property name="name">
-			<!--03注释-->
+			<!--03注释@v1.1.3 hf-->
             <value><![CDATA[<<马玲杉3>>]]></value>
             <!--<null/>-->
         </property>
