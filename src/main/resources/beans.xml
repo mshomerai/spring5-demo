@@ -65,6 +65,11 @@
     <context:property-placeholder location="beans.properties"/>
 
     <!--注释扫描，多个包用,隔开-->
-    <context:component-scan base-package="ml.java.spring5.demo2"/>
+    <!--use-default-filters="true" 或 不写是全包扫描-->
+    <context:component-scan base-package="ml.java.spring5.demo2" use-default-filters="false">
+        <!--仅扫描@Component+@Controller-->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
 </beans>
