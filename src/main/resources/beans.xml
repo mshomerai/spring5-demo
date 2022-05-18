@@ -64,4 +64,7 @@
     <!--外部配置-->
     <context:property-placeholder location="beans.properties"/>
 
+    <!--注释扫描，多个包用,隔开-->
+    <context:component-scan base-package="ml.java.spring5.demo2"/>
+
 </beans>
