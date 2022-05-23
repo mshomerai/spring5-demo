@@ -1,4 +1,4 @@
-package ml.java.spring5.demo2;
+package ml.java.spring5.ioc1;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

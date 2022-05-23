@@ -1,4 +1,4 @@
-package ml.java.spring5.demo1;
+package ml.java.spring5.ioc0;
 
 public class City {
 
