@@ -34,11 +34,11 @@ public class Spring5ApplicationTests {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(Aop1Config.class);
         UserService userService = annotationConfigApplicationContext.getBean("userService", UserService.class);
         System.out.println(userService.add(1, 2));
-        try {
-            userService.except();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            userService.except();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
 }
