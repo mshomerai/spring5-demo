@@ -52,4 +52,8 @@ public class User {
         System.out.println("list " + list.toString());
     }
 
+    public void say(String words){
+        System.out.println(name + " say: " + words);
+    }
+
 }
