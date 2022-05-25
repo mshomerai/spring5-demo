@@ -6,7 +6,9 @@ ioc with xml
 
 ## ioc1
 
-ioc with annotation
+ioc with @Component
+ioc with @Configuration+@Bean
+ioc with @Import
 
 ## aop0
 
@@ -14,4 +16,4 @@ aop with xml
 
 ## aop1
 
-aop with annotation
+aop with @Aspect+@Pointcut+@Order
