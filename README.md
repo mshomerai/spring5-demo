@@ -6,9 +6,9 @@ ioc with xml
 
 ## ioc1
 
-ioc with @Component
-ioc with @Configuration+@Bean
-ioc with @Import
+ioc with @Component <br>
+ioc with @Configuration+@Bean <br>
+ioc with @Import <br>
 
 ## aop0
 
