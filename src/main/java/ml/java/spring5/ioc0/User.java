@@ -49,7 +49,11 @@ public class User {
     public void hello(){
         System.out.println("hello " + name + " in " + city.getRegion());
         System.out.println("array " + Arrays.toString(array));
-        System.out.println("list " + list.toString());
+        try {
+            System.out.println("list " + list.toString());
+        } catch (NullPointerException e) {
+            System.out.println("list none");
+        }
     }
 
     public void say(String words){

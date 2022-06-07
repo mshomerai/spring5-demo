@@ -8,11 +8,18 @@ import ml.java.spring5.ioc1.Ioc1Config;
 import ml.java.spring5.ioc1.Film;
 import ml.java.spring5.ioc1.World;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Spring5ApplicationTests {
+
+    @Test
+    public void test(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(Ioc1Config.class);
+
+    }
 
     @Test
     public void testIoc0() throws InterruptedException {
@@ -43,6 +50,9 @@ public class Spring5ApplicationTests {
         World world1 = annotationConfigApplicationContext.getBean("ml.java.spring5.ioc1.World", World.class);
         System.out.println("world0==world1?" + (world0 == world1));
         annotationConfigApplicationContext.close();
+        //@Bean入参@Bean测试
+        User user = annotationConfigApplicationContext.getBean("user", User.class);
+        user.hello();
     }
 
     @Test

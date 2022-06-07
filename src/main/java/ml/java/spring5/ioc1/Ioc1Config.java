@@ -2,6 +2,7 @@ package ml.java.spring5.ioc1;
 
 import ml.java.spring5.ioc0.City;
 import ml.java.spring5.ioc0.User;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +30,14 @@ public class Ioc1Config {
         City city = new City();
         city.setRegion("SH");
         return city;
+    }
+
+    @Bean
+    public User user(@Qualifier("cityA")City city){ //@Bean注解中的入参也是@Bean？不写@Qualifier会自动去寻找唯一的类？
+        User user = new User();
+        user.setName(city.getRegion());
+        user.setCity(city);
+        return user;
     }
 
 }
