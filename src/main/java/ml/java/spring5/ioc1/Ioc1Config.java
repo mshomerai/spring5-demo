@@ -8,6 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+/**
+ * @Configuration中方法的参数和@Bean中方法的参数都是@Bean？！
+ */
 //@Configuration //默认proxyBeanMethods = true
 @Configuration(proxyBeanMethods = false)
 @ComponentScan(basePackages = {"ml.java.spring5.ioc1"})
@@ -33,7 +36,7 @@ public class Ioc1Config {
     }
 
     @Bean
-    public User user(@Qualifier("cityA")City city){ //@Bean注解中的入参也是@Bean？不写@Qualifier会自动去寻找唯一的类？
+    public User user(@Qualifier("cityA")City city){
         User user = new User();
         user.setName(city.getRegion());
         user.setCity(city);
