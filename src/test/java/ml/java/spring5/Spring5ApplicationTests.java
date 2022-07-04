@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/** v2.2.1 */
+/** v2.2.3 */
 public class Spring5ApplicationTests {
 
     @Test
